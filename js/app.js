@@ -53,6 +53,7 @@ const timer = () => {
     var time = undefined;
     var distance = undefined;
 
+
     time = setInterval(() => {
         distance = countDownDate - (new Date()).getTime();
 
@@ -73,8 +74,8 @@ const buka = async () => {
     document.getElementById('tombol-musik').style.display = 'block';
     audio.play();
     AOS.init();
-    await login();
     timer();
+    await login();
 };
 
 const play = (btn) => {
